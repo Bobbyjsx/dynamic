@@ -2168,7 +2168,7 @@ export const Data = [
      answer: "Because seven ate nine."
     },
     {
-     
+      "type": "dad",
       question: "Why do fathers take an extra pair of socks when they go golfing?",
      answer: "In case they get a hole in one!"
     },
@@ -2193,7 +2193,7 @@ export const Data = [
      answer: "USB."
     },
     {
-     
+      "type": "dad",
       question: "Why don't eggs tell jokes?",
      answer: "Because they would crack each other up."
     },
