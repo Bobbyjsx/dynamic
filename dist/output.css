@@ -879,4 +879,9 @@ video {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .sm\:hover\:text-gray-500:hover {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
 }

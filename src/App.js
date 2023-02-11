@@ -27,7 +27,7 @@ const App = () => {
         <div className=' mt-14  gap-14 flex flex-col '>
           <div className='flex font-mono sm:text-2xl text-xl font-semibold tracking-wider text-center gap-8'>
    
-          <h1 className='cursor-pointer hover:text-gray-500' onClick={ () =>{handleToggle(index);  console.log( isClicked)} } key={index}> {item.question} </h1>
+          <h1 className='cursor-pointer sm:hover:text-gray-500' onClick={ () =>{handleToggle(index);  console.log( isClicked)} } key={index}> {item.question} </h1>
             <span>
               {isClicked === index ? <FiMinus color='green' /> : <FiPlus color='green'/>}
             </span>
