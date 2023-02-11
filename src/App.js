@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Data} from './components/Data'
-import { FiMinus, FiPlus} from 'react-icons/fi'
+import { FiMinus, FiPlus, FiArrowUp} from 'react-icons/fi'
 import './App.css'
 
 const App = () => {
@@ -25,18 +25,26 @@ const App = () => {
       {Data.map((item, index)=>{
       return(
         <div className=' mt-14  gap-14 flex flex-col '>
-          <div className='flex font-mono sm:text-2xl text-xl font-semibold tracking-wider text-center gap-8'>
-   
-          <h1 className='cursor-pointer sm:hover:text-gray-500' onClick={ () =>{handleToggle(index);  console.log( isClicked)} } key={index}> {item.question} </h1>
-            <span>
-              {isClicked === index ? <FiMinus color='green' /> : <FiPlus color='green'/>}
-            </span>
+          <div>
 
+            <div className='flex font-mono sm:text-2xl text-xl font-semibold tracking-wider text-center gap-8'>
+    
+            <h1 className='cursor-pointer sm:hover:text-gray-500' onClick={ () =>{handleToggle(index)} } key={index}> {item.question} </h1>
+              <span onClick={ () =>{handleToggle(index)}}>
+                {isClicked === index ? <FiMinus color='green' /> : <FiPlus color='green'/>}
+              </span>
+
+            </div>
+          {isClicked===null?(
+            <p className='flex justify-center text-sm text-gray-400 text-center mt-2'>click  to view answer <FiArrowUp color="green" /> </p>
+
+          ): null}
           </div>
+
 
           { isClicked === index  ?(
             <h3
-             className='flex flex-col text-center font-sans text-xl font-semibold tracking-widest py-5 border-y-2 border-emerald-500' 
+             className='flex flex-col text-center font-sans text-xl font-semibold tracking-widest py-5 border-y-2 sm:bg-slate-900 bg-slate-800 border-emerald-500' 
              >
               {item.answer}
               </h3> 
