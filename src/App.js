@@ -24,7 +24,7 @@ const App = () => {
       <div className='flex flex-col items-center justify-center py-11 sm:px-0 px-4 bg-slate-900 text-white shadow-2xl font-sans'>
 
       <p className='font-bold sm:text-3xl text-lg flex flex-col text-center border-b-2 pb-3 border-dashed border-emerald-500'>Welcome to the dad jokes, where laughter is just a pun away!(wink)</p>
-      <p className='flex justify-center text-sm text-gray-400 text-center mt-2'><span className='text-red-500'>NOTE: {"  "}</span> click the question or the "<FiPlus color="green"  />" sign to view answer  </p>
+      <p className='flex justify-center text-sm text-gray-400 text-center mt-2'><span className='text-red-500'>NOTE:</span> click the question or the '+' sign to view the answer  </p>
 
       {Data.map((item, index)=>{
       return(
