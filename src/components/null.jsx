@@ -138,3 +138,55 @@ function DynamicInputs() {
 }
 
 export default DynamicInputs;
+
+
+// function detectOS() {
+//     const platform = navigator.platform;
+//     switch (platform) {
+//       case "iPhone":
+//         console.log("Hello iOS user");
+//         break;
+//       case "iPad":
+//         console.log("Hello iOS user");
+//         break;
+//       case "iPod":
+//         console.log("Hello iOS user");
+//         break;
+//       case "MacIntel":
+//         console.log("Hello MacOS user");
+//         break;
+//       case "Win32":
+//         console.log("Hello Windows user");
+//         break;
+//       case "Win64":
+//         console.log("Hello Windows user");
+//         break;
+//       case "Linux x86_64":
+//         console.log("Hello Linux user");
+//         break;
+//       case "Linux i686":
+//         console.log("Hello Linux user");
+//         break;
+//       default:
+//         console.log("Unknown OS");
+//         break;
+//     }
+//     // console.log(platform+'fool')
+//   }
+//   function checkDevice() {
+//     const userAgent = navigator.userAgent;
+//     if (userAgent.includes("iPhone")) {
+//       console.log("Hello iOS user!");
+//     } else if (userAgent.includes("Android")) {
+//       console.log("Hi Android user!");
+//     } else if (userAgent.includes("Macintosh")) {
+//       console.log("Hello MacOS user!");
+//     } else if (userAgent.includes("Windows")) {
+//       console.log("Hi Windows user!");
+//     } else if (userAgent.includes("Linux")) {
+//       console.log("Hi Linux user!");
+//     } else {
+//       console.log("Hi user from an unknown device!");
+//     }
+//   }
+  

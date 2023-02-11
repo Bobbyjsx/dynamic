@@ -6,14 +6,33 @@ import './App.css'
 const App = () => {
   const [isClicked, setIsClicked] = useState(false)
 
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 200) {
+        setShowButton(true)
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleToggle = index =>{
     if(isClicked === index){
-      
-      return setTimeout(setIsClicked(null), 20000)
+      return setIsClicked(null)
     }else{
       setIsClicked(index)
-    } console.log(Data.length)
+    } 
+
   }
+  
+  // console.log(window.pageYOffset)
+ 
  
   return (
     <div >
@@ -57,6 +76,14 @@ const App = () => {
       
     })}
     </div>
+    {showButton && (
+        <button title='Back to top'
+          onClick={handleClick}
+          className="fixed bottom-0 right-0 mb-16 mr-2 bg-green-700 text-white font-bold py-2 px-4 rounded-full hover:bg-green-900"
+        >
+          <FiArrowUp size={'25px'} />
+        </button>
+      )}
       </div>
   )
 }
